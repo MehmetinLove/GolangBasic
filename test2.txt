@@ -1,0 +1,4 @@
+The crc32 hash object implements the Writer interface, so we can write bytes to it like any other Writer. Once we’ve written everything we want, we call Sum32() to
+return a uint32. A common use for crc32 is to compare two files. If the Sum32 value
+for both files is the same, it’s highly likely (though not 100% certain) that the files are
+the same. If the values are different, then the files are definitely not the same:
